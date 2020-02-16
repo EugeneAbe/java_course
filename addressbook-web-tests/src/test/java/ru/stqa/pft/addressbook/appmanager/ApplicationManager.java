@@ -9,33 +9,27 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
-
     public WebDriver wd;
 
+    private SessionHelper sessionHelper;
+    private NavigationHelper navigationHelper;
     private GroupHelper groupHelper;
 
     public void init() {
         wd = new ChromeDriver();
         //wd = new FirefoxDriver();
         wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        login("admin", "secret");
         groupHelper = new GroupHelper(wd);
+        navigationHelper = new NavigationHelper(wd);
+        sessionHelper = new SessionHelper(wd);
+        SessionHelper.login("admin", "secret");
     }
 
-    public void login(String userName, String password) {
-        wd.get("http://localhost/addressbook/");
-        wd.findElement(By.name("user")).clear();
-        wd.findElement(By.name("user")).sendKeys(userName);
-        wd.findElement(By.name("pass")).clear();
-        wd.findElement(By.name("pass")).sendKeys(password);
-        wd.findElement(By.xpath("//input[@value='Login']")).click();
+    public void logout() {
+        wd.findElement(By.linkText("Logout")).click();
     }
 
-    public void logout() {wd.findElement(By.linkText("Logout")).click();
-    }
-
-    public void stop() {
-        wd.quit();
+    public void stop() { wd.quit();
     }
 
     public boolean isElementPresent(By by) {
@@ -58,5 +52,9 @@ public class ApplicationManager {
 
     public GroupHelper getGroupHelper() {
         return groupHelper;
+    }
+
+    public NavigationHelper getNavigationHelper() {
+        return navigationHelper;
     }
 }

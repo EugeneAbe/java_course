@@ -31,10 +31,6 @@ public class GroupHelper {
         wd.findElement(By.name("new")).click();
     }
 
-    public void gotoGroupPage() {
-        wd.findElement(By.linkText("groups")).click();
-    }
-
     public void returnToGroupPage() {
       wd.findElement(By.linkText("group page")).click();
     }
