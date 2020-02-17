@@ -1,14 +1,8 @@
 package ru.stqa.pft.addressbook.tests;
-
-import java.util.concurrent.TimeUnit;
-
-import org.testng.annotations.*;
-import org.openqa.selenium.*;
-//import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.fillFormAddContact;
 
-public class ContactCreate extends TestBase{
+public class ContactCreateTest extends TestBase{
 
 
     @Test
