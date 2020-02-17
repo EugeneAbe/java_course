@@ -35,4 +35,13 @@ public class ContactHelper extends HelperBase {
     public void clickUpdate() {
         click(By.name("update"));
     }
+
+    public void chooseFirstContact() {
+        click(By.name("selected[]"));
+
+    }
+
+    public void clickDelete() {
+        click(By.xpath("//input[@value='Delete']"));
+    }
 }
