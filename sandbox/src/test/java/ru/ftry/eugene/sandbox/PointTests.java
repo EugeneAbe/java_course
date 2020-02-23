@@ -1,4 +1,4 @@
-package ru.ftry.homework3;
+package ru.ftry.eugene.sandbox;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
