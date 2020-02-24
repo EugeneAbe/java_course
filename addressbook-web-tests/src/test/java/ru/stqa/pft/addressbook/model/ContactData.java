@@ -1,6 +1,6 @@
 package ru.stqa.pft.addressbook.model;
 
-public class fillFormAddContact {
+public class ContactData {
     private final String contactFirstName;
     private final String contactLastName;
     private final String contactMidName;
@@ -9,9 +9,9 @@ public class fillFormAddContact {
     private final String contactEmail;
     private String group;
 
-    public fillFormAddContact(String contactFirstName, String contactLastName, String contactMidName,
-                              String contactAddress, String contactHomePhone, String contactEmail,
-                              String group) {
+    public ContactData(String contactFirstName, String contactLastName, String contactMidName,
+                       String contactAddress, String contactHomePhone, String contactEmail,
+                       String group) {
         this.contactFirstName = contactFirstName;
         this.contactLastName = contactLastName;
         this.contactMidName = contactMidName;

@@ -4,7 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-import ru.stqa.pft.addressbook.model.fillFormAddContact;
+import ru.stqa.pft.addressbook.model.ContactData;
+
 
 public class ContactHelper extends HelperBase {
 
@@ -16,7 +17,7 @@ public class ContactHelper extends HelperBase {
         click(By.linkText("add new"));
     }
 
-    public void fillContactForm(fillFormAddContact fillFormAddContact, boolean creation) {
+    public void fillContactForm(ContactData fillFormAddContact, boolean creation) {
         type(By.name("firstname"), fillFormAddContact.getContactFirstName());
         type(By.name("lastname"), fillFormAddContact.getContactLastName());
         type(By.name("middlename"), fillFormAddContact.getContactMidName());
@@ -51,5 +52,16 @@ public class ContactHelper extends HelperBase {
 
     public void clickDelete() {
         click(By.xpath("//input[@value='Delete']"));
+    }
+
+    public void createContact(ContactData contact) {
+        new NavigationHelper(wd).gotoAddNewPage();
+        fillContactForm(contact, true);
+        clickEnter();
+        new NavigationHelper(wd).gotoHome();
+    }
+
+    public boolean isThereAContact() {
+        return isElementPresent(By.name("selected[]"));
     }
 }

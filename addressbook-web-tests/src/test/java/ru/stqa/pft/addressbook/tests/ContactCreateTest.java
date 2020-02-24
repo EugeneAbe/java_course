@@ -1,6 +1,6 @@
 package ru.stqa.pft.addressbook.tests;
 import org.testng.annotations.Test;
-import ru.stqa.pft.addressbook.model.fillFormAddContact;
+import ru.stqa.pft.addressbook.model.ContactData;
 
 public class ContactCreateTest extends TestBase{
 
@@ -9,12 +9,10 @@ public class ContactCreateTest extends TestBase{
     public void testContactCreate() throws Exception {
 
         app.getNavigationHelper().gotoAddNewPage();
-        app.getContactHelper().fillContactForm(new fillFormAddContact("Joseph",
-                "Wissarionowich", "Stalin",
-                "Tbilisi", "777",
-                "stalin@mail.ru", "Beatles"), true);
-        app.getContactHelper().clickEnter();
-
+        app.getContactHelper().createContact(new ContactData("Jogan",
+                "Sebastjan", "Bach",
+                "Groznii", "777",
+                "musician@mail.ru", "Beatles"));
     }
 
 
