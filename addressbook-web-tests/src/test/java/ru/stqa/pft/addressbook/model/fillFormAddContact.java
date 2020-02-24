@@ -7,14 +7,18 @@ public class fillFormAddContact {
     private final String contactAddress;
     private final String contactHomePhone;
     private final String contactEmail;
+    private String group;
 
-    public fillFormAddContact(String contactFirstName, String contactLastName, String contactMidName, String contactAddress, String contactHomePhone, String contactEmail) {
+    public fillFormAddContact(String contactFirstName, String contactLastName, String contactMidName,
+                              String contactAddress, String contactHomePhone, String contactEmail,
+                              String group) {
         this.contactFirstName = contactFirstName;
         this.contactLastName = contactLastName;
         this.contactMidName = contactMidName;
         this.contactAddress = contactAddress;
         this.contactHomePhone = contactHomePhone;
         this.contactEmail = contactEmail;
+        this.group = group;
     }
 
     public String getContactFirstName() {
@@ -39,5 +43,9 @@ public class fillFormAddContact {
 
     public String getContactEmail() {
         return contactEmail;
+    }
+
+    public String getGroup() {
+        return group;
     }
 }
