@@ -7,7 +7,6 @@ import org.testng.Assert;
 public class NavigationHelper extends HelperBase {
 
     public NavigationHelper(WebDriver wd) {
-
         super(wd);
     }
 
