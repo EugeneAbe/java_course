@@ -1,4 +1,4 @@
-package ru.ftry.homework2;
+package ru.ftry.eugene;
 
 public class CalcDistance {
 

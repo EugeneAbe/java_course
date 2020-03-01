@@ -2,7 +2,7 @@ package ru.ftry.eugene.sandbox;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import ru.ftry.homework2.Point;
+import ru.ftry.eugene.Point;
 
 public class PointTests {
 
