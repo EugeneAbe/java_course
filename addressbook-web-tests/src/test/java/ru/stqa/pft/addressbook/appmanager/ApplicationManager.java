@@ -33,7 +33,7 @@ public class ApplicationManager {
         wd.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         groupHelper = new GroupHelper(this);
         navigationHelper = new NavigationHelper(this);
-        sessionHelper = new SessionHelper(wd);
+        sessionHelper = new SessionHelper(this);
         contactHelper = new ContactHelper(this);
         sessionHelper.login("admin", "secret");
     }

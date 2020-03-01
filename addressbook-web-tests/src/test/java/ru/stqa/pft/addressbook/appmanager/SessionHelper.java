@@ -5,8 +5,11 @@ import org.openqa.selenium.WebDriver;
 
 public class SessionHelper extends HelperBase {
 
-    public SessionHelper(WebDriver wd) {
-        super(wd);
+    private ApplicationManager applicationManager;
+
+    public SessionHelper(ApplicationManager applicationManager) {
+        super(applicationManager.wd);
+        this.applicationManager = applicationManager;
     }
 
     public void login(String userName, String password) {
