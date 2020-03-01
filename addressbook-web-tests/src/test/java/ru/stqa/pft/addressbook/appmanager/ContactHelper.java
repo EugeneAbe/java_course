@@ -9,8 +9,11 @@ import ru.stqa.pft.addressbook.model.ContactData;
 
 public class ContactHelper extends HelperBase {
 
-    public ContactHelper(WebDriver wd) {
-        super(wd);
+    private ApplicationManager applicationManager;
+
+    public ContactHelper(ApplicationManager applicationManager) {
+        super(applicationManager.wd);
+        this.applicationManager = applicationManager;
     }
 
     protected void addContactTab() {
@@ -55,10 +58,10 @@ public class ContactHelper extends HelperBase {
     }
 
     public void createContact(ContactData contact) {
-        new NavigationHelper(wd).gotoAddNewPage();
+        applicationManager.getNavigationHelper().gotoAddNewPage();
         fillContactForm(contact, true);
         clickEnter();
-        new NavigationHelper(wd).gotoHome();
+        applicationManager.getNavigationHelper().gotoHome();
     }
 
     public boolean isThereAContact() {

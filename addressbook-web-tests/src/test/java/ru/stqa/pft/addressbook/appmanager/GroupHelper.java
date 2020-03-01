@@ -6,8 +6,11 @@ import ru.stqa.pft.addressbook.model.GroupData;
 
 public class GroupHelper extends HelperBase  {
 
-    public GroupHelper(WebDriver wd) {
-        super(wd);
+    private ApplicationManager applicationManager;
+
+    public GroupHelper(ApplicationManager applicationManager) {
+        super(applicationManager.wd);
+        this.applicationManager = applicationManager;
     }
 
     public void submitGroupCreation() {
