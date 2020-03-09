@@ -4,8 +4,6 @@ import org.openqa.selenium.By;
 
 public class NavigationHelper extends HelperBase {
 
-    private ApplicationManager applicationManager;
-
     public NavigationHelper(ApplicationManager applicationManager) {
         super(applicationManager.wd);
         this.applicationManager = applicationManager;

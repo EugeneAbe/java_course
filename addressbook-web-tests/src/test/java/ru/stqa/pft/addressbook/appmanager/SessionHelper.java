@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 
 public class SessionHelper extends HelperBase {
 
-    private ApplicationManager applicationManager;
-
     public SessionHelper(ApplicationManager applicationManager) {
         super(applicationManager.wd);
         this.applicationManager = applicationManager;

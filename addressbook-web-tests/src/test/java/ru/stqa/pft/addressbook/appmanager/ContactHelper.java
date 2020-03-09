@@ -9,8 +9,6 @@ import ru.stqa.pft.addressbook.model.ContactData;
 
 public class ContactHelper extends HelperBase {
 
-    private ApplicationManager applicationManager;
-
     public ContactHelper(ApplicationManager applicationManager) {
         super(applicationManager.wd);
         this.applicationManager = applicationManager;
