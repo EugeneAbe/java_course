@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.ftry.eugene.sandbox.PrimeTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-01T12:57:12" hostname="DESKTOP-QDHO3G2" time="0.008">
+<testsuite name="ru.ftry.eugene.sandbox.PrimeTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-11T06:35:33" hostname="DESKTOP-QDOTV6P" time="0.01">
   <properties/>
-  <testcase name="testPrime" classname="ru.ftry.eugene.sandbox.PrimeTests" time="0.008"/>
+  <testcase name="testPrime" classname="ru.ftry.eugene.sandbox.PrimeTests" time="0.01"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
